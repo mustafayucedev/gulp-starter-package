@@ -1,0 +1,20 @@
+$xxxs : 374;
+$xxs : 424;
+$xs : 575;
+$sm : 767;
+$md : 991;
+$lg : 1199;
+$xlg : 1441;
+$xxlg : 1681;
+
+@mixin max($breakpoint) {
+	@media (max-width: $breakpoint + px) {
+		@content;
+	}
+}
+
+@mixin min($breakpoint) {
+	@media (min-width: ($breakpoint + 1) + px) {
+		@content;
+	}
+}
